@@ -12,6 +12,8 @@ namespace CSharpEgitimKampi301.EntityLayer.Concrete
         public string CategoryNmae { get; set; }
 
         public bool CategoryStatus { get; set; }
+
+        public List<Product> Products { get; set; } // Code First'te bire çok ilişki
     }
 }
 
