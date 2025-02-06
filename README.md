@@ -41,3 +41,40 @@ protected: Bir sınıf ve o sınıfa miras alan yerlerden erişim sağlanır.
 SOLID PRENSİPLERİ
 -------------------
 Single Responsibility: SOLID prensipleri içinde bulunur, tek sorumluluk ilkesidir bağlı bulunduğu alanda sadece tek bir işlem yapmalıdır. Her bir sınıfın yalnızca o sınıfla ilgili olan bir sorumluluğa sahip olması gerektiğini belirtir.
+
+--------------------------------
+Referanslar: Uygulamadaki katmanlar birbirini referans edebilecek. Her katman birbiriyle haberleşiyor olacak ama bunun için tüm katmanları görmesine gerek kalmayacak çünkü bir önceki üst katmandan referans almış olacak.
+Projeye referans verebilmek için add kısmından Referans seçilir ve hangi katmanın seçileceği belirlenir sonrasında seçilen katman referans olarak ilgili projeye eklenir.
+
+----------------------
+Migration : Göç anlamına gelir, ide den SQL'e database oluşturup değer taşıyacağımız (göç ettireceğimiz) bir yaklaşımdır. Visual Studio, sql'de tablonun oluşturulması için köprü görev görür.
+
+------------------------------
+Abstract : İçinde interface'leri barındıracak. Soyut anlamına gelir. Somut olmayan, fiziksel olarak var olmayan, ancak düşünsel olarak var olan şeyleri ifade eder.
+
+Interface: Arayüz anlamına gelir. Belirli işlevlerin nasıl olması gerektiğini belirten, ancak bu işlevlerin nasıl gerçekleştirileceğini belirtmeyen yapılar.
+
+---------------------------------------
+Tasarım Deseni Nedir : yazılım geliştirmede karşılaşılan yaygın problemleri çözmek için güçlü araçlardır. Bu desenler, yazılımın daha esnek, sürdürülebilir ve okunabilir olmasını sağlar.
+Repository Tasarım Deseni: Veri erişim işlemlerinin daha yapılandırılmış ve yönetilebilir olmasını sağlar. Crud işlemlerini (ekleme, silme, güncelleme ve listeleme işlemleri) veya ıd'ye göre getirme işlemlerini merkezileştirir. bu işlemleri her bir entity için tekrar tekrar yazmak yerine ortak bir yapı sunar.
+-----------------------------------------
+Entity Framework: .NET uygulamalarında veri erişimini ve yönetimini kolaylaştıran bir nesne-ilişkisel eşleme (ORM) frameworküdür. Entity Framework, geliştiricilere veritabanı işlemlerini nesneler üzerinden yapma imkânı sağlar, böylece SQL sorgularını yazma zorunluluğunu ortadan kaldırır.
+
+Database First: Veritabanı şemasını manuel olarak oluşturmak yerine, otomatik olarak oluşturulan modellerle kolayca entegre olabilir ve veri erişimini sağlayabilirsiniz.
+
+------------
+Tablonun Id sütununun key değerinin alınabilmesi için modelimize yansıtırken kesinlikle birincil anahtar olarak belirlenmesi gerekir.
+
+Veritabanında yapılan işlemler model üzerinde sağ tıklayıp Update Model From Database aracılığıyla güncellenmeli ve yapılan işlem modele aktarılmalıdır. Veritabaında her bir değişiklik yaptıktan sonra bunu modele yansıtmak zorundayız.
+
+-------------
+Proje Analisti : Müşterinin istekleri ve yazılımcı arasında bir köprü görevi görür.
+
+
+Entity Framework Metotları:
+ToList(); = Tüm listeyi döndürür.
+SaveChanges(); = yapılan işlemleri veritabanına kaydeder.
+MessageBox.Show(""); = Kullanıcıya mesaj gönderir.
+Find(...); = belirtilen değere göre o satırın hepsini seçer. Ör: Find(id); id değerinin olduğu tüm sütunu seçer.
+Remove(); belirtilen değeri siler.
+Entity Frameworkte where şartları, Lambda Expression olarak tanımlanır. verilen şart öylek
