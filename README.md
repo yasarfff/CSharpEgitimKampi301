@@ -13,13 +13,15 @@
 - [x] 4. Katman = Presentation / UI Layer (Kullanıcı Arayüzü Katmanı) : Yapılan işlemlerin kullanıcıya gösterilecek olan bölümü kapsayacak.
 - Oluşturduğumuz her bir katman sadece kendisine tanımlanan işi yapacak.
 - Projeye yeni bir katman eklerken - Class Library (.NET Framework) - seçilir.
+- Veritabanı işlemlerimizi sql kullanarak değil, c# üzerinde gerçekleştireceğiz.
 
 ---
 
 ## 🛠 **Concrete ve Code First Yaklaşımı**
 
 - **Concrete**: C#'ta genellikle somut ifadeler (sınıflar) için kullanılan bir klasör ismidir.
-- **Code First**: SQL kullanmadan, doğrudan C# kodlarıyla veritabanı şemaları oluşturma yöntemidir.
+- -Oluşturduğumuz sınıflar örneğin Category sınıfı sadece kategori tablosuna ait değerleri tutacak. Tabloya ait tüm sütunların karşılığı bu sınıfta duracak.
+- **Code First**: SQL kullanmadan, doğrudan C# kodlarıyla veritabanı şemaları oluşturma yöntemidir. Bu yaklaşımda değerler veritabanına gönderilirken property olarak gönderilmesi gerekir.
 - Örnek kullanım:
   - **Class**: Bir tabloyu temsil eder.
   - **Property**: Bir sütunu temsil eder.
@@ -144,21 +146,6 @@ Bu sayede yalnızca **virgülden sonra iki basamak** gösterilir.
 
 
 
-
-
-
-// Sınıflar, programlamada 
-
-// Concrete : C#' ta genellikle somut ifadeler (Sınıflar) için kullanılan bir klasör ismidir. 
-// Veritabanı işlemlerimizi sql kullanarak değil, c# üzerinde gerçekleştireceğiz.
-
-// Code First : Veritabanı şemalarının oluşturulması gibi işlemlerde sql kullanmadan doğrudan C# kısmında kod ile oluşturulmasıdır. Bu yaklaşımda değerler veritabanına gönderilirken property olarak gönderilmesi gerekir.
-
-
-// Oluşturduğumuz sınıflar örneğin Category sınıfı sadece kategori tablosuna ait değerleri tutacak. Tabloya ait tüm sütunların karşılığı bu sınıfta duracak.
-
-Class --> Tablo'yu Temsil edecek.
-Property --> Column'u temsil edecek.
 
 // Access Modifiers : Erişim belirleyicileridir. Oluşturulan metodların kimler tarafından erişileceği veya erişilemeyeceğinin belirlendiği ve bir kısıtlama uygulanan değerdir. 
 
