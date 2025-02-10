@@ -83,17 +83,6 @@
 
 ---
 
-
-
-
-Database First: 
-------------
-
-
-
-
-
-
 ## 🗄 **Entity Framework ve ORM Kullanımı**
 **Entity Framework:** .NET uygulamalarında veri erişimini ve yönetimini kolaylaştıran bir nesne-ilişkisel eşleme (ORM) frameworktür. Entity Framework, geliştiricilere veritabanı işlemlerini nesneler üzerinden yapma imkânı sağlar, böylece SQL sorgularını yazma zorunluluğunu ortadan kaldırır.
 - **Entity Framework**, SQL sorgularını doğrudan yazmadan veri yönetimini sağlar.
@@ -102,15 +91,8 @@ Database First:
   - **Database First**: Önceden oluşturulmuş veritabanı şemasını kullanır. Veritabanı şemasını manuel olarak oluşturmak yerine, otomatik olarak oluşturulan modellerle kolayca entegre olabilir ve veri erişimini sağlayabilirsiniz.
 
 ⚠️Tablonun Id sütununun key değerinin alınabilmesi için modelimize yansıtırken kesinlikle birincil anahtar olarak belirlenmesi gerekir.
+
 ⚠️ Veritabanında yapılan işlemler model üzerinde sağ tıklayıp Update Model From Database aracılığıyla güncellenmeli ve yapılan işlem modele aktarılmalıdır. Veritabaında her bir değişiklik yaptıktan sonra bunu modele yansıtmak zorundayız.
-
-
----
-
-## 🔑 **Veritabanı İşlemleri**
-
-- **Id sütunu** birincil anahtar olarak tanımlanmalıdır.
-- Veritabanı değişiklikleri **`Update Model From Database`** ile güncellenmelidir.
 
 ---
 
@@ -127,15 +109,16 @@ Database First:
 | `ToList()` | Tüm listeyi döndürür. |
 | `SaveChanges()` | Veritabanına yapılan değişiklikleri kaydeder. |
 | `MessageBox.Show()` | Kullanıcıya mesaj gönderir. |
-| `Find(id)` | Verilen ID’ye sahip veriyi getirir. |
+| `Find(id)` | Verilen değere göre ör: ID’ye sahip veriyi getirir. |
 | `Remove()` | Veriyi siler. |
 
 ---
 
+
 ## 🏷 **LINQ Sorguları**
 
 - `Where(x => x.Id == id).ToList();` kullanımı ile veritabanında filtreleme yapılabilir.
-
+- Entity Frameworkte where şartları, Lambda Expression olarak tanımlanır.
 ---
 
 ## ⌨ **Kullanışlı Kısayollar**
@@ -162,14 +145,4 @@ Bu sayede yalnızca **virgülden sonra iki basamak** gösterilir.
 
 
 
--------------
-Proje Analisti : Müşterinin istekleri ve yazılımcı arasında bir köprü görevi görür.
 
-
-Entity Framework Metotları:
-ToList(); = Tüm listeyi döndürür.
-SaveChanges(); = yapılan işlemleri veritabanına kaydeder.
-MessageBox.Show(""); = Kullanıcıya mesaj gönderir.
-Find(...); = belirtilen değere göre o satırın hepsini seçer. Ör: Find(id); id değerinin olduğu tüm sütunu seçer.
-Remove(); belirtilen değeri siler.
-Entity Frameworkte where şartları, Lambda Expression olarak tanımlanır. verilen şart öylek
