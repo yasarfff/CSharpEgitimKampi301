@@ -10,18 +10,13 @@
 namespace CSharpEgitimKampi301.EFProject
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Location
+    public partial class sp_helpdiagrams_Result
     {
-        public int LocationId { get; set; }
-        public string City { get; set; }
-        public string Country { get; set; }
-        public Nullable<int> Capacity { get; set; }
-        public Nullable<decimal> Price { get; set; }
-        public string DayNight { get; set; }
-        public Nullable<int> GuideId { get; set; }
-    
-        public virtual Guide Guide { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }

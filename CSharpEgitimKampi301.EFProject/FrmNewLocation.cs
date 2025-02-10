@@ -38,7 +38,7 @@ namespace CSharpEgitimKampi301.EFProject
         private void btnAdd_Click(object sender, EventArgs e)
         {
             Location location = new Location();
-            location.Capacity = nudCapacity.Value.ToString();
+            location.Capacity = int.Parse(nudCapacity.Value.ToString());
             location.City = txtCity.Text;
             location.Country = txtCountry.Text;
             location.Price = decimal.Parse(txtPrice.Text);
@@ -67,7 +67,7 @@ namespace CSharpEgitimKampi301.EFProject
             var updateValue = db.Location.Find(id);
             updateValue.DayNight = txtDayNight.Text;
             updateValue.Price = decimal.Parse(txtPrice.Text);
-            updateValue.Capacity = nudCapacity.Value.ToString();
+            updateValue.Capacity = int.Parse(nudCapacity.Value.ToString());
             updateValue.City = txtCity.Text;
             updateValue.GuideId = int.Parse(cmbGuide.SelectedValue.ToString());
             db.SaveChangesAsync();
