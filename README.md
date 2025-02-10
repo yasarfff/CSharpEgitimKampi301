@@ -119,7 +119,11 @@
 
 - `Where(x => x.Id == id).ToList();` kullanımı ile veritabanında filtreleme yapılabilir.
 - Entity Frameworkte where şartları, Lambda Expression olarak tanımlanır.
----
+
+- `Average()` metodunun sonucunu `GetValueOrDefault()` ile işleyerek, eğer değer `null` ise `0.0` olarak döndürmek mümkündür. Bu sayede yalnızca **virgülden sonra iki basamak** gösterilir.
+```csharp
+var ortalama = db.Students.Average(x => x.Grade).GetValueOrDefault().ToString("F2");
+```
 
 ## ⌨ **Kullanışlı Kısayollar**
 
@@ -128,21 +132,4 @@
 | **Toolbox Açma** | `Ctrl + Alt + X` |
 
 ---
-
-## 📌 **Önemli Not**
-
-`Average()` metodunun sonucunu `GetValueOrDefault()` ile işleyerek, eğer değer `null` ise `0.0` olarak döndürmek mümkündür:
-
-```csharp
-var ortalama = db.Students.Average(x => x.Grade).GetValueOrDefault().ToString("F2");
-```
-
-Bu sayede yalnızca **virgülden sonra iki basamak** gösterilir.
-
----
-
-📌 **Bu notlar, C# Eğitim Kampı kapsamında alınmıştır.** 🎯
-
-
-
 
