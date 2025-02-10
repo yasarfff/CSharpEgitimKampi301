@@ -8,7 +8,7 @@
 Bu proje, C# eğitim kampı kapsamında oluşturulmuş bir Windows Forms uygulamasıdır. Uygulama, tur firmaları için çeşitli istatistikleri görselleştiren bir arayüz sunar.  
 
 ## Ekran Görüntüsü  
-![Firma İstatistikleri]("[CSharpEgitimKampi301.EFProject\istatistik.png](https://github.com/yasarfff/CSharpEgitimKampi301/blob/master/CSharpEgitimKampi301.EFProject/istatistik.png?raw=true)")  
+![Firma İstatistikleri]("(https://github.com/yasarfff/CSharpEgitimKampi301/blob/master/CSharpEgitimKampi301.EFProject/istatistik.png?raw=true)")  
 
 ## Açıklama  
 Bu uygulama, turistik lokasyonlarla ilgili verileri yönetmek ve istatistikleri göstermek amacıyla geliştirilmiştir. Form üzerindeki panellerde lokasyon sayısı, toplam kapasite, ortalama fiyat gibi bilgiler gösterilmektedir.  
