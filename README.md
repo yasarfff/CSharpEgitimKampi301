@@ -20,7 +20,7 @@
 ## 🛠 **Concrete ve Code First Yaklaşımı**
 
 - **Concrete**: C#'ta genellikle somut ifadeler (sınıflar) için kullanılan bir klasör ismidir.
-- -Oluşturduğumuz sınıflar örneğin Category sınıfı sadece kategori tablosuna ait değerleri tutacak. Tabloya ait tüm sütunların karşılığı bu sınıfta duracak.
+- Oluşturduğumuz sınıflar örneğin Category sınıfı sadece kategori tablosuna ait değerleri tutacak. Tabloya ait tüm sütunların karşılığı bu sınıfta duracak.
 - **Code First**: SQL kullanmadan, doğrudan C# kodlarıyla veritabanı şemaları oluşturma yöntemidir. Bu yaklaşımda değerler veritabanına gönderilirken property olarak gönderilmesi gerekir.
 - Örnek kullanım:
   - **Class**: Bir tabloyu temsil eder.
@@ -29,13 +29,13 @@
 ---
 
 ## 🔐 **Erişim Belirleyicileri (Access Modifiers)**
-
+**Access Modifiers :** Erişim belirleyicileridir. Oluşturulan metodların kimler tarafından erişileceği veya erişilemeyeceğinin belirlendiği ve bir kısıtlama uygulanan değerdir.
 | Belirleyici  | Açıklama |
 |-------------|----------|
 | `public` | Her yerden erişilebilir. |
 | `private` | Sadece bulunduğu sınıftan erişilebilir. |
 | `internal` | Sadece bulunduğu katmandan erişilebilir. |
-| `protected` | Sınıf ve türetilen sınıflardan erişilebilir. |
+| `protected` | Sınıf ve türetilen (Miras alan) sınıflardan erişilebilir. |
 
 ---
 
@@ -44,7 +44,8 @@
 - **Field**: Sınıf içinde tanımlanan değişken.
 - **Property**: `get` ve `set` metodlarını içeren yapı.
 - **Variable**: Bir metod içinde tanımlanan değişken.
-
+- ör: int x şeklindeği bir değişken direkt olarak sınıf içinde tanımlanırsa Field , eğer değişken yapısı sonuna get ve set isimli iki değer alırsa Property, eğer değer direk metot içinde tanımlanırsa Veriable(Değişken) olur.
+  
 ---
 
 ## 🔍 **SOLID Prensipleri**
@@ -147,18 +148,6 @@ Bu sayede yalnızca **virgülden sonra iki basamak** gösterilir.
 
 
 
-// Access Modifiers : Erişim belirleyicileridir. Oluşturulan metodların kimler tarafından erişileceği veya erişilemeyeceğinin belirlendiği ve bir kısıtlama uygulanan değerdir. 
-
-4 temel erişim belirleyici (Accsess Modifiers)
-------------------------------------------------
-public : Her yerden erişilebilir.
-private : Sadece bulunduğu sınıftan erişilir, diğer sınıflar tarafından erişilemez.
-internal : Sadece bulunduğu katmanda erişim sağlanır.
-protected: Bir sınıf ve o sınıfa miras alan yerlerden erişim sağlanır.
-
-
-// Field - Variable- Property arasındaki farklar: 
-// ör: int x şeklindeği bir değişken direkt olarak sınıf içinde tanımlanırsa Field , eğer değişken yapısı sonuna get ve set isimli iki değer alırsa Property, eğer değer direk metot içinde tanımlanırsa Veriable(Değişken) olur. 
 
 
 SOLID PRENSİPLERİ
