@@ -44,20 +44,21 @@
 - **Field**: Sınıf içinde tanımlanan değişken.
 - **Property**: `get` ve `set` metodlarını içeren yapı.
 - **Variable**: Bir metod içinde tanımlanan değişken.
-- ör: int x şeklindeği bir değişken direkt olarak sınıf içinde tanımlanırsa Field , eğer değişken yapısı sonuna get ve set isimli iki değer alırsa Property, eğer değer direk metot içinde tanımlanırsa Veriable(Değişken) olur.
+- **Ör:** int x şeklindeği bir değişken direkt olarak sınıf içinde tanımlanırsa Field , eğer değişken yapısı sonuna get ve set isimli iki değer alırsa Property, eğer değer direk metot içinde tanımlanırsa Veriable(Değişken) olur.
   
 ---
 
 ## 🔍 **SOLID Prensipleri**
 
-- **S**ingle Responsibility: Bir sınıfın yalnızca **tek bir sorumluluğu** olmalıdır.
+- **S**ingle Responsibility:SOLID prensipleri içinde bulunur, tek sorumluluk ilkesidir bağlı bulunduğu alanda sadece tek bir işlem yapmalıdır. Her bir sınıfın yalnızca o sınıfla ilgili olan bir sorumluluğa sahip olması gerektiğini belirtir.
 
 ---
 
 ## 🔗 **Katmanlar Arası Referanslama**
 
 - Katmanlar, birbirine doğrudan bağımlı olmadan iletişim kurabilmelidir.
-- **Referans ekleme** işlemi: `Add > Reference` üzerinden yapılır.
+- Her katman birbiriyle haberleşiyor olacak ama bunun için tüm katmanları görmesine gerek kalmayacak çünkü bir önceki üst katmandan referans almış olacak.
+- **Referans ekleme** işlemi: `Add > Reference` üzerinden yapılır,  hangi katmanın seçileceği belirlenir sonrasında seçilen katman referans olarak ilgili projeye eklenir.
 
 ---
 
@@ -70,24 +71,39 @@
 
 ## 🏗 **Abstract ve Interface Kullanımı**
 
-- **Abstract**: Soyut sınıfları içerir.
-- **Interface**: Arayüzler belirli işlevlerin nasıl olması gerektiğini tanımlar.
-
+- **Abstract**: Soyut sınıfları içerir. İçinde interface'leri barındırır.
+- **Interface**: Arayüz anlamına gelir. Arayüzler belirli işlevlerin nasıl olması gerektiğini tanımlar ancak bu işlevlerin nasıl gerçekleştirileceğini belirtmeyen yapılardır.
+  
 ---
 
 ## 🏛 **Tasarım Desenleri (Design Patterns)**
-
-- **Repository Tasarım Deseni**: CRUD işlemlerini merkezi hale getirir.
+**Tasarım Deseni Nedir :** Yazılım geliştirmede karşılaşılan yaygın problemleri çözmek için güçlü araçlardır. Bu desenler, yazılımın daha esnek, sürdürülebilir ve okunabilir olmasını sağlar.Tasarım Deseni Nedir : yazılım geliştirmede karşılaşılan yaygın problemleri çözmek için güçlü araçlardır. Bu desenler, yazılımın daha esnek, sürdürülebilir ve okunabilir olmasını sağlar.
+- **Repository Tasarım Deseni**: Veri erişim işlemlerinin daha yapılandırılmış ve yönetilebilir olmasını sağlar. Crud işlemlerini (ekleme, silme, güncelleme ve listeleme işlemleri) veya ıd'ye göre getirme işlemlerini merkezileştirir. bu işlemleri her bir entity için tekrar tekrar yazmak yerine ortak bir yapı sunar.
 - **Amaç**: Kod tekrarını önleyerek, **daha modüler ve yönetilebilir bir yapı** oluşturmak.
 
 ---
 
-## 🗄 **Entity Framework ve ORM Kullanımı**
 
+
+
+Database First: 
+------------
+
+
+
+
+
+
+## 🗄 **Entity Framework ve ORM Kullanımı**
+**Entity Framework:** .NET uygulamalarında veri erişimini ve yönetimini kolaylaştıran bir nesne-ilişkisel eşleme (ORM) frameworktür. Entity Framework, geliştiricilere veritabanı işlemlerini nesneler üzerinden yapma imkânı sağlar, böylece SQL sorgularını yazma zorunluluğunu ortadan kaldırır.
 - **Entity Framework**, SQL sorgularını doğrudan yazmadan veri yönetimini sağlar.
 - **Code First vs. Database First:**
   - **Code First**: Tabloları kod üzerinden oluşturur.
-  - **Database First**: Önceden oluşturulmuş veritabanı şemasını kullanır.
+  - **Database First**: Önceden oluşturulmuş veritabanı şemasını kullanır. Veritabanı şemasını manuel olarak oluşturmak yerine, otomatik olarak oluşturulan modellerle kolayca entegre olabilir ve veri erişimini sağlayabilirsiniz.
+
+⚠️Tablonun Id sütununun key değerinin alınabilmesi için modelimize yansıtırken kesinlikle birincil anahtar olarak belirlenmesi gerekir.
+⚠️ Veritabanında yapılan işlemler model üzerinde sağ tıklayıp Update Model From Database aracılığıyla güncellenmeli ve yapılan işlem modele aktarılmalıdır. Veritabaında her bir değişiklik yaptıktan sonra bunu modele yansıtmak zorundayız.
+
 
 ---
 
@@ -145,39 +161,6 @@ Bu sayede yalnızca **virgülden sonra iki basamak** gösterilir.
 📌 **Bu notlar, C# Eğitim Kampı kapsamında alınmıştır.** 🎯
 
 
-
-
-
-
-
-SOLID PRENSİPLERİ
--------------------
-Single Responsibility: SOLID prensipleri içinde bulunur, tek sorumluluk ilkesidir bağlı bulunduğu alanda sadece tek bir işlem yapmalıdır. Her bir sınıfın yalnızca o sınıfla ilgili olan bir sorumluluğa sahip olması gerektiğini belirtir.
-
---------------------------------
-Referanslar: Uygulamadaki katmanlar birbirini referans edebilecek. Her katman birbiriyle haberleşiyor olacak ama bunun için tüm katmanları görmesine gerek kalmayacak çünkü bir önceki üst katmandan referans almış olacak.
-Projeye referans verebilmek için add kısmından Referans seçilir ve hangi katmanın seçileceği belirlenir sonrasında seçilen katman referans olarak ilgili projeye eklenir.
-
-----------------------
-Migration : Göç anlamına gelir, ide den SQL'e database oluşturup değer taşıyacağımız (göç ettireceğimiz) bir yaklaşımdır. Visual Studio, sql'de tablonun oluşturulması için köprü görev görür.
-
-------------------------------
-Abstract : İçinde interface'leri barındıracak. Soyut anlamına gelir. Somut olmayan, fiziksel olarak var olmayan, ancak düşünsel olarak var olan şeyleri ifade eder.
-
-Interface: Arayüz anlamına gelir. Belirli işlevlerin nasıl olması gerektiğini belirten, ancak bu işlevlerin nasıl gerçekleştirileceğini belirtmeyen yapılar.
-
----------------------------------------
-Tasarım Deseni Nedir : yazılım geliştirmede karşılaşılan yaygın problemleri çözmek için güçlü araçlardır. Bu desenler, yazılımın daha esnek, sürdürülebilir ve okunabilir olmasını sağlar.
-Repository Tasarım Deseni: Veri erişim işlemlerinin daha yapılandırılmış ve yönetilebilir olmasını sağlar. Crud işlemlerini (ekleme, silme, güncelleme ve listeleme işlemleri) veya ıd'ye göre getirme işlemlerini merkezileştirir. bu işlemleri her bir entity için tekrar tekrar yazmak yerine ortak bir yapı sunar.
------------------------------------------
-Entity Framework: .NET uygulamalarında veri erişimini ve yönetimini kolaylaştıran bir nesne-ilişkisel eşleme (ORM) frameworküdür. Entity Framework, geliştiricilere veritabanı işlemlerini nesneler üzerinden yapma imkânı sağlar, böylece SQL sorgularını yazma zorunluluğunu ortadan kaldırır.
-
-Database First: Veritabanı şemasını manuel olarak oluşturmak yerine, otomatik olarak oluşturulan modellerle kolayca entegre olabilir ve veri erişimini sağlayabilirsiniz.
-
-------------
-Tablonun Id sütununun key değerinin alınabilmesi için modelimize yansıtırken kesinlikle birincil anahtar olarak belirlenmesi gerekir.
-
-Veritabanında yapılan işlemler model üzerinde sağ tıklayıp Update Model From Database aracılığıyla güncellenmeli ve yapılan işlem modele aktarılmalıdır. Veritabaında her bir değişiklik yaptıktan sonra bunu modele yansıtmak zorundayız.
 
 -------------
 Proje Analisti : Müşterinin istekleri ve yazılımcı arasında bir köprü görevi görür.
