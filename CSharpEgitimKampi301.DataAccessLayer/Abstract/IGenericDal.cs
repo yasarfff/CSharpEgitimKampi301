@@ -13,7 +13,7 @@ namespace CSharpEgitimKampi301.DataAccessLayer.Abstract
 
         void Insert(T entity); // Ekle
         void Update(T entity); // Güncelle
-        void Delete(int id); // Id'ye göre silme
+        void Delete(T entity); // Id'ye göre silme
         List<T> GetAll(); // Tüm verileri getir.
         T GetById(int id);  
 
