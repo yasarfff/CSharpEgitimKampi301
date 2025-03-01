@@ -95,6 +95,14 @@
       <Project>{cdf28c46-97e1-45e7-a71c-4868256aabdd}</Project>
       <Name>CSharpEgitimKampi301.BusinessLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\CSharpEgitimKampi301.DataAccessLayer\CSharpEgitimKampi301.DataAccessLayer.csproj">
+      <Project>{4CEB7526-6E1D-453D-BE33-DE4A0E741D7B}</Project>
+      <Name>CSharpEgitimKampi301.DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CSharpEgitimKampi301.EntityLayer\CSharpEgitimKampi301.EntityLayer.csproj">
+      <Project>{BA028811-9325-47BF-8DD8-9439EA21DB78}</Project>
+      <Name>CSharpEgitimKampi301.EntityLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

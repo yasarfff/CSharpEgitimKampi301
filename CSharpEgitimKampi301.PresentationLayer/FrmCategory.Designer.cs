@@ -68,6 +68,7 @@
             this.btnList.TabIndex = 2;
             this.btnList.Text = "Listele";
             this.btnList.UseVisualStyleBackColor = true;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // dataGridView1
             // 
@@ -134,6 +135,7 @@
             this.btnGetbyId.TabIndex = 10;
             this.btnGetbyId.Text = "ID\'ye Göre Getir";
             this.btnGetbyId.UseVisualStyleBackColor = true;
+            this.btnGetbyId.Click += new System.EventHandler(this.btnGetbyId_Click);
             // 
             // btnUpdate
             // 
@@ -143,6 +145,7 @@
             this.btnUpdate.TabIndex = 11;
             this.btnUpdate.Text = "Güncelle";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDdelete
             // 
@@ -152,6 +155,7 @@
             this.btnDdelete.TabIndex = 12;
             this.btnDdelete.Text = "Sil";
             this.btnDdelete.UseVisualStyleBackColor = true;
+            this.btnDdelete.Click += new System.EventHandler(this.btnDdelete_Click);
             // 
             // btnAdd
             // 
@@ -161,6 +165,7 @@
             this.btnAdd.TabIndex = 13;
             this.btnAdd.Text = "Ekle";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // FrmCategory
             // 
