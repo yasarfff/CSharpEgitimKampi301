@@ -131,3 +131,42 @@ var ortalama = db.Students.Average(x => x.Grade).GetValueOrDefault().ToString("F
 | **Toolbox Açma** | `Ctrl + Alt + X` |
 
 ---
+
+
+## ⚙️ **Entity State**
+**Entity State**, varlık sınıflarının mevcut durumunu bildirir.  
+Bu durum, varlıklar (entities) üzerinde yapılacak herhangi bir işlemde değişebilir.  
+Entity State, **ekleme**, **silme** ve **güncelleme** işlemlerinin kullanımını sağlar.
+
+---
+
+## 🪄 **Business Katmanı**
+
+## Business Katmanı Nedir?
+**Business Katmanı**, bir yazılımın iş kurallarını ve mantığını içeren katmandır.  
+Uygulamanın işleyişiyle ilgili kararlar burada alınır ve iş kuralları burada uygulanır.
+
+### Business Katmanının Görevi ve Önemi:
+- **Veri doğrulama**: Kullanıcıdan gelen verilerin geçerliliğini kontrol eder.
+- **İş kuralları**: Örneğin, bir ürünün stokta olup olmadığını kontrol etmek veya siparişin minimum tutarı karşılayıp karşılamadığını denetlemek.
+- **Veri erişim katmanı ile bağlantı**: Veriler genellikle bir veritabanından alınır ve işlenerek sunum katmanına gönderilir.
+- **Kod tekrarını önleme**: İş mantığını merkezi bir yerde toplamak, kod tekrarını azaltarak daha temiz ve yönetilebilir bir yapı oluşturur.
+
+### Business Katmanı Nasıl Kullanılır?
+Genellikle bir **Business Logic Layer (BLL)** veya **Service Layer** olarak adlandırılır ve genellikle **Entity Framework** veya başka ORM’ler ile çalışarak **Veri Erişim Katmanına (Data Access Layer - DAL)** bağlanır.
+
+Kısaca bu katmanda butonların, olayların veya varlıkların nasıl tepki vereceği, koşul ifadeleri bulunur.
+
+---
+
+## 💉 **Dependency Injection (Bağımlılık Enjeksiyonu)**
+
+**Dependency Injection (DI)**, bir sınıfın ihtiyaç duyduğu bağımlılıkları dışarıdan almasını sağlayan bir **tasarım deseni** ve **programlama tekniğidir**.  
+Bu teknik, **SOLID** prensiplerinden biridir.
+
+### Dependency Injection'ın Avantajları:
+- **Modülerlik**: Sınıflar birbirine sıkı sıkıya bağlı olmaz.
+- **Test Edilebilirlik**: Bağımlılıklar dışarıdan yönetildiği için testlerde farklı senaryolar kolayca oluşturulabilir.
+- **Sürdürülebilirlik**: Kod daha esnek ve yönetilebilir hale gelir.
+
+Bu yaklaşım sayesinde, bir sınıfın bağımlılıklarını kendi içinde oluşturmak yerine, bu bağımlılıkların dışarıdan sağlanması hedeflenir.
